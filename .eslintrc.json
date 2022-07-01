@@ -1,0 +1,25 @@
+{
+  "extends": ["standard", "next", "prettier"],
+  "rules": {
+    "import/order": [
+      "error",
+      {
+        "groups": ["builtin", "external", "internal", "parent", "sibling", "type"],
+        "pathGroups": [
+          {
+            "pattern": "@/types/**",
+            "group": "type"
+          },
+          {
+            "pattern": "@/**",
+            "group": "internal"
+          }
+        ],
+        "alphabetize": {
+          "order": "asc"
+        },
+        "newlines-between": "always"
+      }
+    ]
+  }
+}
